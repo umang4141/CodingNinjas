@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class countwords {
+    public static void countwordss(String str1)
+    {
+        int i,countWords=0;
+       for(i=0;i<str1.length()-1;i++)
+       {
+        if(str1.charAt(i)==' ' && str1.charAt(i+1)!=' ')
+        countWords++;
+   
+
+       }
+       System.out.println(countWords+1);
+    }
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String str1 = sc.nextLine();
+    countwordss(str1);
+
+}
+}
