@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class SubstringofString {
+    public static void Substringss(String str1)
+    {
+        int start=0,end=0;
+         for(start=0;start<str1.length();start++)
+         {
+             for(end=start;end<str1.length();end++)
+             {
+              System.out.println(str1.substring(start,end+1));
+             }
+         }        
+    }
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String str1 = sc.nextLine();
+    Substringss(str1);
+
+}
+}
