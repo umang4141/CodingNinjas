@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class ReverseEachword {
+    public static void reverseeachword(String str1)
+    {
+        int i;
+       for(i=0;i<str1.length()-1;i++)
+       {
+        if(str1.charAt(i) == ' ')
+      {
+ System.out.println(str1.charAt(i));
+        }
+      
+       
+    }
+}
+public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String str1 = sc.nextLine();
+    reverseeachword(str1);
+
+}
+}
