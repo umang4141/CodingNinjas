@@ -1,0 +1,14 @@
+
+import java.util.Scanner;
+public class ClassesObjectss {
+    int rollno;
+    String name;
+
+public static void main(String[] args) {
+    //Scanner sc = new Scanner(System.in);
+   ClassesObjectss s1 = new ClassesObjectss();
+   ClassesObjectss s2 = new ClassesObjectss();
+   System.out.println(s1);
+   System.out.print(s1.name + " " + s1.rollno);
+}
+}
