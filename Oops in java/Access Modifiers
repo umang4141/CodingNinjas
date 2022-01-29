@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Accessmodifier {
+    int roll=42;
+    public String names="Umang Pratap Singh";
+}
+ class changes
+{
+    public static void main(String[] args) {
+        //Scanner sc = new Scanner(System.in);
+       Accessmodifier s1 = new Accessmodifier();
+       Accessmodifier s2 = new Accessmodifier();
+       System.out.println(s1);
+       System.out.print(s1.names + " " + s1.roll);
+    }
+}
