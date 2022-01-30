@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class Fractionclass1 {
+    private int numerator;
+    private int denominator;
+    public  Fractionclass1(int numerator,int denominator)
+    {
+        this.numerator = numerator;
+        this.denominator = denominator;
+        simplify();
+        
+    }
+    // Creating simplify as private so that no one can see your previos calculations inside the projects.
+    private void simplify()
+    {
+          int i;
+          int gcd=1;
+          int smaller = Math.min(numerator,denominator);
+          for(i=1;i<=smaller;i++)
+          {
+                if(numerator%i == 0 && denominator%i == 0)
+                {
+                    gcd=i;
+                }
+          }
+           
+          numerator = numerator/gcd;
+          denominator = denominator/gcd;
+
+    }
+    public void show()
+    {
+        System.out.println(numerator +"/" + denominator);
+    }
+}
+class Fractionclass1use
+{
+    public static void main(String[] args)
+{
+    Fractionclass1 s1 = new Fractionclass1(4,6);
+    s1.show();
+}
+}    
