@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Constructors {
+    public String name;
+    public int rollNo;
+    public static final double CONVERSION = 0.95;
+    private static int numstudents;
+    public Constructors(String name,int rollNo)
+    {
+            this.name = name;
+            this.rollNo = rollNo;
+            numstudents++;
+}
+public Constructors(String name)
+{
+       this.name=name;
+       this.rollNo=49;
+       numstudents++;
+       
+}
+    public void Getvalue()
+    {
+         System.out.println(name + " " + rollNo);
+    }
+public static int Getstaticvalue()
+{
+return numstudents;
+}
+}
+//Static Function to get the value of static variable
+class Constructors_use
+{
+   public static void main(String[] args)
+   {
+   //double conversion = 0.98;
+   Constructors s1 = new Constructors("Umang Pratap Singh",42);
+   s1.Getvalue();
+   Constructors s2 = new Constructors("Dev Pratap Singh",56);
+   s2.Getvalue();
+   //System.out.println(Constructors.numstudents);
+  Constructors s3 = new Constructors("Dev Pratap Singh");
+   s3.Getvalue();
+   System.out.println(Constructors.Getstaticvalue());
+}
+}
