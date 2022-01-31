@@ -1,0 +1,19 @@
+package CodingNinja1;
+
+public class VehicleUse {
+
+	public static void main(String[] args) {
+      Vehicles v = new Vehicles();
+      v.SetValues("Jaguar");
+      v.Speed=200;
+      v.GetValues();
+      Car c = new Car();
+      c.SetValues("Ford");
+      c.Speed = 250;
+      c.NumDoors = 100;
+      c.GetValues();
+    		  
+	}
+	
+
+}
