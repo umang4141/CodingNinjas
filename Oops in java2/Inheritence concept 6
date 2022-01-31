@@ -1,0 +1,18 @@
+package Ingeritence_1;
+import CodingNinja1.Vehicles;
+public class VehicleUse2 extends Vehicles{
+
+	public static void main(String[] args) {
+        VehicleUse2 v = new VehicleUse2();
+        v.SetValues("KIA");
+        v.Speed = 350;
+        v.GetValues();
+        Truck_1 t = new Truck_1();
+        t.maxLoadingCapacity = 2100;
+        t.Speed=350;
+        t.SetValues("RANGE ROVER");
+        t.print();
+        
+	}
+
+}
