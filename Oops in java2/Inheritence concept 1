@@ -1,0 +1,28 @@
+package CodingNinja1;
+import java.util.Scanner;
+public class Vehicles {
+public int Speed;
+private String Brand;
+//public Vehicles(int Speed,String Brand)
+//{
+//     this.Speed=Speed;
+//     this.Brand=Brand;
+    
+//  GetValues();
+    
+//}
+public void SetValues(String Brand)
+{
+	this.Brand = Brand;
+}
+public String GetValues1_1()
+{
+	return Brand;
+}
+ public void GetValues()
+ {
+	 System.out.println("Brand is:" + Brand);
+	 System.out.println("Speed is:" + Speed);
+	 
+ }
+
