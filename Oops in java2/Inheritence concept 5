@@ -1,0 +1,13 @@
+package Ingeritence_1;
+import CodingNinja1.Vehicles;
+public class Truck_1 extends Vehicles {
+
+	
+   int maxLoadingCapacity;
+	      public void print()
+         {
+		 System.out.println("Brand is:" + GetValues1_1());
+	   	 System.out.println("Speed is:" + Speed);
+	   	 System.out.println("maxLoadingCapacity is:" + maxLoadingCapacity);
+         }
+	}
