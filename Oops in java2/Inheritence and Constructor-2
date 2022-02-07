@@ -1,0 +1,17 @@
+package CodingNinja1;
+
+public class Car extends Vehicles{
+	
+    public Car()
+    {
+    	System.out.println("Car's Constructor");
+    }
+    public int NumDoors;
+    public void GetValues()
+    {
+   	 System.out.println("Brand is:" + GetValues1_1());
+   	 System.out.println("Speed is:" + Speed);
+   	 System.out.println("NumDoors is:" + NumDoors);
+   	 
+    }
+}
