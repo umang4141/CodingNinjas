@@ -1,0 +1,65 @@
+package TwoDArrays;
+import java.util.Scanner;
+public class Largestrowofcolumn {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int  maximum = Integer.MIN_VALUE,index=-1;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of rows");
+		int rows = sc.nextInt();
+		System.out.println("Enter the number of cols");
+		int cols = sc.nextInt();
+		int [][]array = new int[rows][cols];
+		
+	    
+		for(int i = 0;i < rows;i++)
+		{  
+		
+			for(int j = 0;j < cols;j++)
+			{
+				System.out.println("Enter the element at:" + i + " " + "rows" + " " + j + " " + "column");
+				array[i][j] = sc.nextInt();
+			}
+		}
+		for(int i = 0;i < rows;i++)
+		{ 
+			int rowsum = 0;
+			for(int j = 0;j < cols;j++)
+			{
+                     rowsum +=array[i][j];   	
+                     
+			}
+			System.out.print(rowsum + " ");
+	
+	
+		if(rowsum > maximum)
+	{
+	maximum = rowsum;
+			index = i;
+			}
+	}
+		System.out.println();
+	System.out.println("Maximum Sum is: " + maximum + " " + "at Index " + " " + index);
+		index=-1;
+		maximum=Integer.MIN_VALUE;
+		for(int j = 0;j < cols;j++)
+			{ 
+		        int cols_sum = 0;
+			for(int i = 0;i < rows;i++)
+			{
+				cols_sum += array[i][j];
+			}
+			System.out.print(cols_sum + " ");
+			if(cols_sum>maximum)
+			{
+				maximum = cols_sum;
+				index=j;
+			}
+			
+		
+	}
+		System.out.println();
+		System.out.println("Maximum Sum is: " + maximum + " " + "at Index " + " " + index);
+}
+}
