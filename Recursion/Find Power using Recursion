@@ -1,0 +1,33 @@
+package Inheritence;
+import java. lang. Math;
+import java.util.Scanner;
+
+public class CalculatePower {
+
+public static int power(int x,int n)
+	{
+		if(n == 1)
+		{
+			return x;
+		}
+		else
+		{
+		 int ans =(int)Math.pow(x,n-1);
+		  return x*ans;
+		  
+		}
+	}
+public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+
+		 Scanner sc = new Scanner(System.in);
+		 System.out.print("Enter the number: ");
+		 int x = sc.nextInt();
+		 System.out.print("Enter the power: ");
+		 int n = sc.nextInt();
+		// int n=10;
+		 int ans = power(x,n);
+		 System.out.println(ans);
+	}
+}
