@@ -1,0 +1,31 @@
+package LinkedList;
+
+public class Node1<T> {
+	T data;
+	Node1<T> next;
+	Node1(T data)
+	{
+		this.data=data;
+		next = null;
+	}
+
+}
+package LinkedList;
+import java.util.*;
+public class Linkedlist2 {
+public static void main(String[] args) {
+  Node1<Integer> n1 = new Node1<Integer>(10);
+  System.out.println("Data in the node n1 is: " + n1.data);
+  System.out.println("Address of the node n1 is: " + n1);
+  System.out.println("Value in the next of n1: " + n1.next);
+  Node1<Integer> n2 = new Node1<Integer>(20);
+  n1.next = n2;
+  System.out.println("Data in the node n2 is: " + n2.data);
+  System.out.println("Value in the next of n1 after performing operations: " + n1.next);
+  
+  
+  
+
+}
+}
+
