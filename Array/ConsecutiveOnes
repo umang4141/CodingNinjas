@@ -1,0 +1,45 @@
+package Javametads2;
+public class consecutiveones{
+	
+void consecutive(int []arr,int n)
+{
+	int i,j,count;
+	
+  int maximum = Integer.MIN_VALUE;
+   
+   for(i = 0;i < n;i++)
+   {
+	   count = 0;
+	   for(j = i;j < n
+			   ;j++)
+	   {
+		   if(arr[i] ==1 && arr[j]==1)
+			   count++;
+		   else
+			   break;
+		   
+	   }
+	  if(count>maximum)
+	  {
+		  maximum = count;
+		  
+	  }
+	   
+	   
+   }
+   System.out.print(maximum + " ");
+   
+   
+   
+}
+public static void main(String[] args)
+{
+	consecutiveones find = new consecutiveones();
+    int arr[] = {1,0,1,1,1,1,0,1,1};
+    int n = arr.length;
+    find.consecutive(arr,n);
+    //zero.printArray(arr,n);
+    
+}
+
+}
