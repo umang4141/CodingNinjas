@@ -1,0 +1,40 @@
+package Javamega;
+
+public class Subarray {
+   void sub(int []arr,int n)
+	{ int sum,temp = 0;
+	int maximum = Integer.MIN_VALUE;
+		int i,j,k;
+		for(i=0;i<n;i++)
+		{      
+			for(j = 0;j<n;j++)
+			{   
+				sum = 0;
+				for(k=i;k<=j;k++);
+				{
+					
+				//System.out.print(arr[k] +" ");
+					sum = sum+arr[k];
+				}
+				maximum=Math.max(maximum, sum);
+              
+              //System.out.print("   --->   Sum is:" + sum);
+				
+				
+				//System.out.println();
+			}
+			
+			
+
+		}
+		System.out.print("Maximum Sum is --> " + maximum);
+		}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Subarray s = new Subarray();
+		int arr[] = {2,3,4,5,-3,2,3,4,-10};
+        int n = arr.length;
+        s.sub(arr,n);
+	}
+
+}
