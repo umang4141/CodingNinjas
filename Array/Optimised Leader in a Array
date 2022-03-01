@@ -1,0 +1,40 @@
+package Javametads2;
+
+public class Leaderinanarray {
+	void learr(int []arr,int n)
+    {
+		int i;
+	    int current = arr[n-1];
+	    System.out.print(current + " ");
+	    for(i=n-2; i>=0; i--)
+	    {
+	    	if(current < arr[i])
+	    	{
+	    		current = arr[i];
+	    		System.out.print(current + " ");
+	    	}
+	    }
+       
+    }
+        	 
+  //void printArray(int arr[],int n)
+    //{
+     //   for (int i = 0; i <n; i++)
+      //      System.out.print(arr[i] + " ");
+    //}
+ 
+
+    public static void main(String[] args)
+    {
+    	Leaderinanarray zero = new Leaderinanarray();
+        int arr[] = {7,10,4,3,6,5,2};
+        int n = arr.length;
+        zero.learr(arr,n);
+        //zero.printArray(arr,n);
+        
+    }
+		
+}
+
+
+
