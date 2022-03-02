@@ -1,0 +1,37 @@
+package Megagfg;
+
+import java.util.Scanner;
+
+public class MaximumProductofTwoElementsinanArray {
+	static int solution(int []arr,int n)
+	{
+		int i,j,sum=0,maximum = Integer.MIN_VALUE;
+		   for(i= 0;i<arr.length;i++)
+		   {
+	           sum = 0;
+	          for(j=i+1;j<arr.length;j++)
+	          {
+	        	  sum = (arr[i]-1)*(arr[j]-1);
+	        	  maximum = Math.max(sum, maximum);
+	              
+	              
+	        	  
+	          }
+	          
+	     
+		   }
+		return maximum;
+	
+	}
+	
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int []arr = {3,4,5,2};
+        int n = arr.length;
+		solution(arr,n);
+		
+
+	}
+}
