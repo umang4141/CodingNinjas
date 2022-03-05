@@ -1,0 +1,44 @@
+package Megagfg;
+
+import java.util.*;
+import java.math.*;
+
+
+public class Windowslidingtechnique {
+	static void solution(int []nums,int n,int k)
+	{
+		int i,j,sum=0,count=0;
+		int max = Integer.MIN_VALUE;
+		int l;
+		l=k;
+		for(i=0;i<n-1;i++)
+		{
+			sum = 0;
+			for(j=i;j<k;j++)
+		     {
+				sum = sum + nums[j];
+				
+			     
+			}
+			if(k <= (n-1))
+			k++;
+		    max = Math.max(sum,max);
+			//System.out.println(sum);
+			
+			}
+		System.out.println(max);
+	}
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		int []nums = {5,-10,6,90,3};
+        int n = nums.length;
+        int k =sc.nextInt();
+		solution(nums,n,k);
+	
+
+}
+
+}
