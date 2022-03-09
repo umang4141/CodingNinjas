@@ -1,0 +1,39 @@
+package Megagfg;
+
+import java.util.Scanner;
+
+public class Leftrotatearray {
+
+	public static void solution(int []nums,int n)
+	{
+		int i,res=nums[0];
+		//int maximum = Integer.MIN_VALUE;
+		//int l;
+		//l=k;
+		for(i=0;i<n-1;i++)
+		{
+			
+		nums[i] = nums[i+1];
+		
+			
+	}
+		res = nums[i];
+
+		for(i=0;i<n-1;i++)
+		{
+			System.out.print(nums[i] + " ");
+		}
+	}
+	public static void main(String[] args) {
+		
+		// TODO Auto-generated method stub
+		Occurenceofelement call = new Occurenceofelement();
+		Scanner sc = new Scanner(System.in);
+		
+		int []nums = {222,2,5,10,11,5};
+        int n = nums.length;
+        //int k =sc.nextInt();
+		solution(nums,n);
+
+}
+}
