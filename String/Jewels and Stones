@@ -1,0 +1,37 @@
+package Megagfg;
+import java.util.*;
+import java.io.*;
+
+import java.util.Scanner;
+
+public class JewelsandStones {
+	public static void Address(String str,String str1)
+	{     
+		int count = 0;
+		    for(int i = 0;i<str.length();i++)
+		    {
+		    	for(int j = 0;j<str1.length();j++)
+		    	{
+		    		if(str.charAt(i) == str1.charAt(j))
+		    		{
+		    			count++;
+		    		}
+		    	}
+		    }
+		    System.out.print(count);
+	
+			
+	}
+	
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		  Scanner sc =  new Scanner(System.in);
+		  String str = "z";
+		  String str1 = "ZZ";
+		  //str = sc.nextLine();
+		  Address(str,str1);
+	}
+}
