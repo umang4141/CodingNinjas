@@ -1,0 +1,23 @@
+package leeeetcodeee;
+import java.util.*;
+import java.util.ArrayList;
+public class Copyofonearraylisttoanother {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+      Scanner sc = new Scanner(System.in);
+      ArrayList<String> hey = new ArrayList<String>(10);
+      
+      hey.add("Umang");
+      hey.add("dev");
+      hey.add("mukesh");
+      hey.add("praveen");
+      System.out.println(hey);
+      ArrayList hey2 = (ArrayList)hey.clone();
+      System.out.println(hey2);
+      
+      
+		
+	}
+
+}
