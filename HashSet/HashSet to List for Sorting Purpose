@@ -1,0 +1,38 @@
+package leeeetcodeee;
+import java.util.*;
+import java.util.Scanner;
+import java.io.*;
+public class UnionofArrays {
+
+public static void find(int []arr,int []arr1)
+	
+	{
+	   int n = arr.length;
+	   int m = arr1.length;
+	     HashSet<Integer> s = new HashSet<>();
+	   for(int i=0;i<n;i++)
+	   {
+		   s.add(arr[i]);
+	   }
+	   for(int j=0;j<m;j++)
+	   {
+		   s.add(arr1[j]);
+	   }
+	   s.size();
+	   //System.out.print(s.toString() + " ");
+	  ArrayList<Integer> list = new ArrayList<Integer>(s);
+	  Collections.sort(list);
+	  System.out.print(list.toString());
+	
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		int []arr = {10,15,20,15,30,30,5};
+		int []arr1 = {30,5,30,80};
+		//int n1 = arr.length;
+		//int n2 = arr1.length;
+		find(arr,arr1);
+	}
+}
