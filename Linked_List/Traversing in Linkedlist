@@ -1,0 +1,29 @@
+package leeeetcodeee;
+import java.util.*;
+public class Linked_list {
+int data;
+Linked_list next;
+Linked_list(int x)
+{
+	data = x;
+	next = null;
+}
+public static void printlist(Linked_list head)
+{
+	Linked_list curr = head;
+	while(curr!=null)
+	{
+		System.out.print(curr.data + " ");
+		curr = curr.next;
+	}
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Linked_list head = new Linked_list(10);
+		head.next = new Linked_list(20);
+		head.next.next = new Linked_list(30);
+		head.next.next.next = new Linked_list(40);
+		printlist(head);
+	}
+
+}
