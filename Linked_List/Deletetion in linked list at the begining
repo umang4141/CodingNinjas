@@ -1,0 +1,63 @@
+package leeeetcodeee;
+import java.util.*;
+public class Deletion_at_Begining {
+	Node head;
+	class Node
+	{
+		int data;
+		Node next;
+		Node(int x)
+		{
+			data = x;
+			next = null;
+			}
+	}
+	public void deletestart()
+	{
+		if(head == null)
+		{
+			System.out.println("List is empty,not possible to delete");
+			return;
+		}
+		System.out.println("Deleted:" + head.data);
+		head = head.next;
+	}
+	public Node insert(int data)
+	{
+		Node newnode = new Node(data);
+		newnode.next = head;
+		head = newnode;
+		return head;
+	}
+	public void display()
+	{
+		Node node = head;
+		while(node!=null)
+		{
+			System.out.print(node.data + " ");
+			node = node.next;
+		}
+		System.out.println("\n");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Deletion_at_Begining l1 = new Deletion_at_Begining();
+		l1.insert(10);
+		l1.insert(20);
+        l1.insert(30);
+        l1.insert(40);
+        l1.insert(50);
+        l1.insert(60);
+        l1.display();
+        l1.deletestart();
+        l1.display();
+
+        l1.deletestart();
+        l1.deletestart();
+        l1.deletestart();
+        l1.display();
+
+		
+	}
+
+}
