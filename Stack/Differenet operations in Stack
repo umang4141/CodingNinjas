@@ -1,0 +1,71 @@
+package leeeetcodeee;
+import java.util.*;
+public class Stack_Basic {
+
+	static  int MAX = 100;
+    int top;
+    int a[] = new int[MAX]; // Maximum size of Stack
+ 
+
+    boolean isEmpty()
+    {
+        return (top < 0);
+    }
+    Stack_Basic()
+    {
+        top = - 1;
+    }
+ 
+
+    void push(int x)
+    {
+    	if(top>=(MAX-1))
+    	{
+    		System.out.println("Condition is overflow:");
+    	}
+    	else
+    	{
+    		++top;
+    		a[top]=x;
+    		System.out.println(x + " : Pushed into the stack");
+    	}
+    }
+    void pop()
+    {
+    	if(top<0)
+    	{
+    		System.out.println("Condition is underflow:");
+    	}
+    	else
+    	{
+    		int x = a[top];
+    		top--;
+    		System.out.println(x +" : popped out of the stack");
+    	}
+    }
+    void peek()
+    {
+    	if (top < 0) {
+            System.out.println("Underflow condition");
+   
+        }
+        else {
+            int x = a[top];
+    		System.out.println(x +" : peek of the stack");
+
+        }
+    }
+    public static void main(String args[])
+    {
+    	Stack_Basic stk = new Stack_Basic();
+        stk.push(20);
+        stk.push(40);
+        stk.push(60);
+        stk.pop();
+        stk.peek();
+    }
+}
+
+
+
+
