@@ -1,0 +1,32 @@
+package leeeetcodeee;
+import java.util.*;
+
+public class othersarraylist {
+public static void main(String args[])
+{
+	ArrayList<String> animal=new ArrayList<String>();
+	animal.add("Dog");
+	animal.add("Tiger");
+	animal.add("Lion");
+	animal.add("Fox");
+	animal.add("Rabbit");
+	System.out.println(animal.get(3)); 
+	animal.set(1,"Bear"); 
+	System.out.println(animal);
+	animal.add(2, "Mouse");
+	System.out.println(animal);
+	animal.remove("Mouse");
+	animal.remove("Dog");
+	animal.add(4,"Tiger");
+	System.out.println(animal);
+	Collections.sort(animal); 
+	System.out.println(animal);
+	Object String[] = animal.toArray();
+	for(int i=0;i<String.length;i++)
+	{
+		System.out.print("{" + String[i] + "}" + " ");
+	}
+	System.out.println();
+	System.out.println(animal.size());
+}
+}
