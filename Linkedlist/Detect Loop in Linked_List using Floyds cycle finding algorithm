@@ -1,0 +1,61 @@
+package leeeetcodeee;
+import java.util.*;
+import java.util.HashSet;
+public class Floyd_scyclefinding {
+	static Node head;
+	static class Node
+	{
+		int data;
+		Node next;
+		Node(int d)
+		{
+			this.data = d;
+			next = null;
+		}
+	}
+	void push(int new_data)
+	{
+		Node temp =  new Node(new_data);
+		temp.next = head;
+		head = temp;
+	}
+	public void find_data()
+	{
+		Node temp = head;
+		Node slow_ptr = head;
+		Node fast_ptr = head;
+		int flag = 0;
+       while(slow_ptr!=null && fast_ptr!=null && fast_ptr.next!=null)
+       {
+		   slow_ptr = slow_ptr.next;
+           fast_ptr = fast_ptr.next.next;
+           if(slow_ptr==fast_ptr) {
+        	   flag++;
+        	  break;
+        	 }
+       }
+       if(flag>0)
+       {
+    	   System.out.println("Loop is detected");
+       }
+       else
+       {
+    	   System.out.println("Loop is not detected");
+
+       }
+	System.out.println("Number of loop are:" + flag);
+	}
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Floyd_scyclefinding ll1 = new Floyd_scyclefinding();
+		ll1.push(10);
+		ll1.push(20);
+		ll1.push(30);
+		ll1.push(40);
+		ll1.push(50);
+		ll1.head.next.next.next =  ll1.head;
+		ll1.head.next.next = ll1.head.next;
+        ll1.find_data();
+}
+}
