@@ -1,0 +1,70 @@
+package leeeetcodeee;
+import java.util.*;
+
+public class Occurence_of_element {
+
+	Node head;
+	static class Node
+	{
+		int data;
+		Node next;
+		Node(int d)
+		{
+			this.data = d;
+			this.next = null;
+		}
+	}
+	public void push(int new_data)
+	{
+		Node new_node = new Node(new_data);
+		new_node.next = head;
+		head = new_node;
+	}
+	public int get_count(int x)
+	{
+		Node temp = head;
+		int len = 0;
+		while(temp!=null)
+		{
+			 if(temp.data == x)
+			 {
+				 len++;
+			 }
+			 temp = temp.next;
+		}
+		return len;
+	}
+	public void display()
+	{
+		Node temp1 = head;
+		while(temp1!=null)
+		{
+			System.out.print(temp1.data + " ");
+			temp1 = temp1.next;
+		}
+		System.out.println();
+		
+	}
+	
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Occurence_of_element ll1 = new Occurence_of_element();
+		
+			ll1.push(10);
+			ll1.push(20);
+			ll1.push(10);
+			ll1.push(340);
+			ll1.push(900);
+			ll1.push(900);
+			ll1.push(900);
+			ll1.push(1000);
+			ll1.push(1100);
+			ll1.display();
+			System.out.println("Occurence of Element in Linked_List is:" + ll1.get_count(900));
+		
+
+		}
+
+	}
+
+
