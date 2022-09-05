@@ -1,0 +1,50 @@
+package first;
+import java.io.*;
+import java.util.*;
+public class binary {
+
+	public static void binarysearch(int arr[],int target)
+	{
+		int start = 0;
+		int end = arr.length-1;
+		int count = 0;
+		boolean flag = false;
+		while(start<=end)
+		{
+			int mid = start + (end - start)/2;
+			
+			if(target == arr[mid])
+			{
+	         
+				flag = true;
+	            
+			}
+			else if(target > arr[mid])
+			{
+				start = mid+1;
+			}
+			else
+			{
+				end = mid -1;
+			}
+			
+		}
+		if(flag)
+		{
+			System.out.println("Element is Present");
+		}
+		else
+		{
+			System.out.println("Element is not Present");
+
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        int arr[] = {4,5,6,7,8,10,11,12,13,14,15,16,18};
+        int target = 15;
+       binarysearch(arr,target);
+        //System.out.println(ans);
+	}
+
+}
