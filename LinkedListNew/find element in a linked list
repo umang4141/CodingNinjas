@@ -1,0 +1,70 @@
+import java.io.*;
+import java.util.*;
+import java.util.ArrayList;
+public class Insertatbeg {
+    Node head;
+    public static class Node{
+        int data;
+        Node next;
+        Node(int x)
+        {
+            data = x;
+            next = null;
+        }
+    }
+    public Node insert_beginning(int data)
+    {
+        Node newnode = new Node(data);
+        newnode.next = head;
+        head = newnode;
+      return head;
+    }
+    public void size()
+    {
+        int count=0;
+        Node temp = head;
+        while(temp!=null)
+        {
+            count++;
+            temp = temp.next;
+        }
+     System.out.println("The size of LinkedList:" + count);
+    }
+    public void display()
+    {
+      Node temp = head;
+      while(temp!=null)
+      {
+        System.out.print(temp.data + " ");
+        temp = temp.next;
+      }
+    }
+    public int find(int data)
+    {
+        Node temp = head;
+        int flag = 0;
+        while(temp!=null)
+        {
+            if(temp.data == data)
+            {
+              flag++;
+            }
+            temp=temp.next;
+        }
+        return flag;
+   
+    }
+    public static void main(String args[])
+    {
+        Insertatbeg obj = new Insertatbeg();
+        obj.insert_beginning(10);
+        obj.insert_beginning(20);
+        obj.insert_beginning(30);
+        obj.insert_beginning(40);
+        obj.insert_beginning(50);
+        obj.size();
+        obj.display();
+        obj.find(30);
+
+    }
+}
