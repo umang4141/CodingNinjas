@@ -1,0 +1,57 @@
+import java.io.*;
+import java.util.*;
+import java.util.ArrayList;
+public class Insertatend {
+    Node head;
+    public class Node{
+     int data;
+     Node next;
+     Node(int x)
+     {
+        data = x;
+        next = null;
+     }
+
+    }
+    public void push(int data)
+    {
+        Node newnode = new Node(data);
+        if(head == null)
+        {
+            head = newnode;
+            return;
+        }
+        Node temp = head;
+        while(temp.next!=null)
+        {
+            temp= temp.next;
+            temp.next= newnode;
+        }
+    }
+
+    public void display()
+    {
+        Node temp = head;
+        int count = 0;
+      while(temp!=null)
+      {
+        count++;
+        System.out.print(temp.data + " ");
+        temp = temp.next;
+      }
+      System.out.println("The size of LinkedList is:" + count);
+
+    }
+    public static void main(String args[])
+    {
+        Insertatend obj = new Insertatend();
+        obj.push(10);
+        obj.push(20);
+        obj.push(30);
+        obj.push(40);
+        obj.push(50);
+        obj.push(60);
+        obj.display();
+
+    }
+}
