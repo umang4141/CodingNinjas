@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+import java.util.Scanner;
+public class commonelement {
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int arr1[] = {1,2,3,4,2,4,5,6,5,4,3};
+        int arr2[] = {3,5,4,3,3,1,2,3,2,1,2};
+        HashMap<Integer,Integer>h1 = new HashMap<>();
+        for(int ele:arr1)
+        {
+            if(h1.containsKey(ele))
+            {
+                int ov = h1.get(ele);
+                int nv = ov+1;
+                h1.put(ele, nv);
+            }
+            else{
+                h1.put(ele,1);
+            }
+
+        }
+        for(int ele1:arr2)
+        {
+            if(h1.containsKey(ele1) && (h1.get(ele1))>0)
+            {
+                System.out.print(ele1 + " ");
+                int ov = h1.get(ele1);
+                int nv = ov-1;
+
+                h1.put(ele1,nv);
+                //h1.remove(ele1);
+            }
+        }
+
+    }
+}
