@@ -1,0 +1,31 @@
+public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        HashMap<Character,Integer> h1 = new HashMap<>();
+       for(int i=0;i<str.length();i++)
+       {
+          char ch = str.charAt(i);
+          if(h1.containsKey(ch))
+          {
+            int of = h1.get(ch);
+            int nf = of+1;
+            h1.put(ch,nf);
+          }
+          else{
+            h1.put(ch, 1);
+          }
+
+       }
+       int mf = h1.get(str.charAt(0));
+       char mfc = str.charAt(0);
+       int ans = 1;
+       for(Character key:h1.keySet())
+       {
+            if(h1.get(key)>h1.get(mfc))
+            {
+                mfc  = key;
+                ans = h1.get(key);
+            }
+       }
+       System.out.print
