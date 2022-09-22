@@ -1,0 +1,30 @@
+//package Collections in java.Set Interface;
+import java.util.*;
+import java.io.*;
+public class countsubarraywithzerocount {
+    public static void main(String args[])
+    {
+        int arr1[] = {2,8,-3,-5,2,-4,6,1,2,1,-3,4};
+       int subarray = 0;
+       HashSet<Integer>h1 = new HashSet<>();
+       int count = 0;
+      for(int i=0;i<arr1.length;i++)
+      {
+        subarray+=arr1[i];
+ 
+        if(arr1[i]==0||subarray==0||h1.contains(subarray))
+        {
+             count++;
+        }
+        h1.add(subarray);
+      }
+      
+      System.out.println(count);
+           
+              
+    }
+          
+    }
+
+
+
