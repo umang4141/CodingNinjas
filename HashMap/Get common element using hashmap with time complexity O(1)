@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+public class getcommon
+{
+    public static void solution(int arr1[],int arr2[])
+    {
+       HashMap<Integer,Integer> h1= new HashMap<Integer,Integer>();
+       for(int val:arr1)
+       {
+        if(h1.containsKey(val))
+        {
+            int of = h1.get(val);
+            int nf = of+1;
+            h1.put(val,nf);
+
+        }
+        else{
+            h1.put(val,1);
+        }
+       }
+       for(int val:arr2)
+       {
+        if(h1.containsKey(val))
+        {
+            System.out.print(val + " ");
+        }
+        h1.remove(val);
+       }
+
+
+    }
+     public static void main(String args[]) {
+           int arr1[] = {2,3,4,1,6,7,4,2,4,8};
+           int arr2[] = {5,4,3,6,1,7,8,5,3,9};
+           solution(arr1,arr2);
+
+    }
+}
