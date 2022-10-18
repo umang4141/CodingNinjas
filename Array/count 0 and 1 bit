@@ -1,0 +1,42 @@
+class GFG {
+static final int m = 3; 
+static final int n = 2; 
+
+static long countSets(int a[][]) {
+ 
+    long res = 0;
+ 
+    for (int i = 0; i < n; i++) {
+    int u = 0, v = 0;
+    for (int j = 0; j < m; j++) {
+        if (a[i][j] == 1)
+        u++;
+        else
+        v++;
+    }
+    res += Math.pow(2, u) - 1 + Math.pow(2, v) - 1;
+    }
+ 
+    // traverses column wise
+    for (int i = 0; i < m; i++) {
+    int u = 0, v = 0;
+    for (int j = 0; j < n; j++) {
+        if (a[j][i] == 1)
+        u++;
+        else
+        v++;
+    }
+    res += Math.pow(2, u) - 1 + Math.pow(2, v) - 1;
+    }
+ 
+    
+    return res - (n * m);
+}
+ 
+// Driver code
+public static void main(String[] args) {
+    int a[][] = {{1, 0, 1}, {0, 1, 0}};
+ 
+    System.out.print(countSets(a));
+}
+}
