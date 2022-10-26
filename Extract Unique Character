@@ -1,0 +1,32 @@
+import java.util.*;
+import java.io.*;
+import java.util.ArrayList;
+public class extractuniquecharacter {
+    public static void  uniquechar(String str)
+    {
+           
+            HashMap<Character,Boolean> h1 = new HashMap<Character,Boolean>();
+            if(str.length()==0)
+            System.out.println("");
+         String ans="";
+         for(int i=0;i<str.length();i++)
+         {
+              char ch = str.charAt(i);
+              if(!h1.containsKey(ch))
+              {
+                h1.put(ch, true);
+                ans+=ch;
+              }
+         }
+         System.out.println(ans);
+    }
+    public static void main(String args[])
+    {
+           Scanner sc = new Scanner(System.in);
+           //int n  = sc.nextInt();
+          String str = "ababacd";
+          uniquechar(str);
+//System.out.println(output);
+           
+    }
+}
