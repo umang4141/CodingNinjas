@@ -1,0 +1,51 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.io.*;
+import java.util.*;
+class LinkedList {
+    Node head;
+    class Node
+    {
+        Node next;
+        int data;
+        Node(int d)
+        {
+            data = d;
+            next = null;
+        }
+    }
+    public void push(int data)
+    {
+        Node newnode = new Node(data);
+        newnode.next = head;
+        head = newnode;
+    }
+    public void printNode(int x)
+    {
+    
+        Node temp = head;
+        int count = 0;
+        while(temp!=null)
+        {
+           if(count == x)
+           {
+               System.out.println(temp.data);
+           }
+           count++;
+            temp  = temp.next;
+
+        }
+   
+    }
+    public static void main(String[] args) {
+        //System.out.println("Hello, World!");
+        LinkedList ll1 = new LinkedList();
+        ll1.push(10);
+        ll1.push(20);
+         ll1.push(30);
+          ll1.push(40);
+           ll1.push(50);
+           ll1.printNode(2);
+           
+    }
+}
