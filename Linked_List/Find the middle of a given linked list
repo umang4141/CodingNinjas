@@ -1,0 +1,75 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.io.*;
+import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+class LinkedList {
+    Node head;
+    class Node
+    {
+        Node next;
+        int data;
+        Node(int d)
+        {
+            data = d;
+            next = null;
+        }
+    }
+    public void push(int data)
+    {
+        Node newnode = new Node(data);
+        newnode.next = head;
+        head = newnode;
+    }
+    public void printNode(int x)
+    {
+    
+    Node temp1 = head;
+    while(temp1!=null)
+    {
+        System.out.print(temp1.data + " ");
+        temp1 = temp1.next;
+    }
+    
+    }
+    public int findlength()
+    {
+        Node temp = head;
+        int length = 0;
+        while(temp!=null)
+        {
+            length++;
+            temp = temp.next;
+        }
+        return length;
+    }
+    public void printmiddle()
+    {
+        if (head != null) {
+            int length = findlength();
+            Node temp = head;
+            int middleLength = length / 2;
+            while (middleLength != 0) {
+                temp = temp.next;
+                middleLength--;
+            }
+                        System.out.println();
+
+            System.out.print("The middle element is ["
+                             + temp.data + "]");
+        }
+    }
+    public static void main(String[] args) {
+        //System.out.println("Hello, World!");
+        LinkedList ll1 = new LinkedList();
+        ll1.push(35);
+        ll1.push(15);
+        ll1.push(4);
+        ll1.push(20);
+        ll1.push(30);
+        ll1.printNode(3);
+        ll1.printmiddle();
+           
+    }
+}
